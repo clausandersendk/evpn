@@ -1,0 +1,1054 @@
+{
+  "name": "dcf",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-0bda30856514",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "graphite": {
+      "index": "0",
+      "shortname": "graphite",
+      "longname": "graphite",
+      "fqdn": "graphite.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/graphite",
+      "kind": "linux",
+      "image": "netreplica/graphite",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/graphite",
+        "clab-node-name": "graphite",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf",
+        "graph-hide": "yes"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8080,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8080,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-1-100": {
+      "index": "1",
+      "shortname": "host-1-100",
+      "longname": "host-1-100",
+      "fqdn": "host-1-100.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-1-100",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-1-100",
+        "clab-node-name": "host-1-100",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-1-101": {
+      "index": "2",
+      "shortname": "host-1-101",
+      "longname": "host-1-101",
+      "fqdn": "host-1-101.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-1-101",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-1-101",
+        "clab-node-name": "host-1-101",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-1-103": {
+      "index": "3",
+      "shortname": "host-1-103",
+      "longname": "host-1-103",
+      "fqdn": "host-1-103.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-1-103",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-1-103",
+        "clab-node-name": "host-1-103",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-12-100": {
+      "index": "4",
+      "shortname": "host-12-100",
+      "longname": "host-12-100",
+      "fqdn": "host-12-100.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-12-100",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-12-100",
+        "clab-node-name": "host-12-100",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-2-100": {
+      "index": "5",
+      "shortname": "host-2-100",
+      "longname": "host-2-100",
+      "fqdn": "host-2-100.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-2-100",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-2-100",
+        "clab-node-name": "host-2-100",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-2-101": {
+      "index": "6",
+      "shortname": "host-2-101",
+      "longname": "host-2-101",
+      "fqdn": "host-2-101.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-2-101",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-2-101",
+        "clab-node-name": "host-2-101",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-2-103": {
+      "index": "7",
+      "shortname": "host-2-103",
+      "longname": "host-2-103",
+      "fqdn": "host-2-103.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-2-103",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-2-103",
+        "clab-node-name": "host-2-103",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-3-1": {
+      "index": "8",
+      "shortname": "host-3-1",
+      "longname": "host-3-1",
+      "fqdn": "host-3-1.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-3-1",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-3-1",
+        "clab-node-name": "host-3-1",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-3-100": {
+      "index": "9",
+      "shortname": "host-3-100",
+      "longname": "host-3-100",
+      "fqdn": "host-3-100.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-3-100",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::10",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-3-100",
+        "clab-node-name": "host-3-100",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "host-3-101": {
+      "index": "10",
+      "shortname": "host-3-101",
+      "longname": "host-3-101",
+      "fqdn": "host-3-101.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/host-3-101",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/network-multitool",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/host-3-101",
+        "clab-node-name": "host-3-101",
+        "clab-node-type": "",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "leaf1": {
+      "index": "11",
+      "shortname": "leaf1",
+      "longname": "leaf1",
+      "fqdn": "leaf1.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/leaf1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:f4:0b:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "12",
+      "shortname": "leaf2",
+      "longname": "leaf2",
+      "fqdn": "leaf2.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/leaf2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:ad:0c:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf3": {
+      "index": "13",
+      "shortname": "leaf3",
+      "longname": "leaf3",
+      "fqdn": "leaf3.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/leaf3",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:de:0d:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/leaf3",
+        "clab-node-name": "leaf3",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine1": {
+      "index": "14",
+      "shortname": "spine1",
+      "longname": "spine1",
+      "fqdn": "spine1.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/spine1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:7d:0e:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/spine1",
+        "clab-node-name": "spine1",
+        "clab-node-type": "ixrd5",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine2": {
+      "index": "15",
+      "shortname": "spine2",
+      "longname": "spine2",
+      "fqdn": "spine2.dcf.io",
+      "group": "",
+      "labdir": "/home/cka/nokia/evpn-lab/clab-dcf/spine2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.7.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:c6:0f:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-0bda30856514",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/cka/nokia/evpn-lab/clab-dcf/spine2",
+        "clab-node-name": "spine2",
+        "clab-node-type": "ixrd5",
+        "clab-owner": "cka",
+        "clab-topo-file": "/home/cka/nokia/evpn-lab/topo.yml",
+        "containerlab": "dcf"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "leaf1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:4f:1d:8c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spine1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:45:7c:a3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:dd:52:9d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spine1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:84:2a:c2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf3",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:36:58:d7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spine1",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:05:00:ef",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:2d:4a:06",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spine2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:39:6d:eb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:50:94:be",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spine2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:9d:48:a1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf3",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:aa:54:1c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "spine2",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:14:d3:1b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-1-100",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:16:cb:d6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "e1-10",
+        "mac": "aa:c1:ab:e3:72:03",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-1-101",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:aa:3d:01",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "e1-11",
+        "mac": "aa:c1:ab:13:86:bb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-1-103",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:58:6f:42",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "e1-12",
+        "mac": "aa:c1:ab:bc:00:da",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-12-100",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d2:e4:08",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "e1-13",
+        "mac": "aa:c1:ab:32:a2:6d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-12-100",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:5f:1c:ea",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "e1-13",
+        "mac": "aa:c1:ab:ff:52:81",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-2-100",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:57:ac:fb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "e1-10",
+        "mac": "aa:c1:ab:e9:a3:b0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-2-101",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:cc:72:d5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "e1-11",
+        "mac": "aa:c1:ab:f6:6f:43",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-2-103",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:bc:38:72",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "e1-12",
+        "mac": "aa:c1:ab:73:b9:29",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-3-100",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:53:26:ac",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf3",
+        "interface": "e1-10",
+        "mac": "aa:c1:ab:86:da:b8",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-3-101",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:5d:53:bd",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf3",
+        "interface": "e1-11",
+        "mac": "aa:c1:ab:b6:d4:8a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "host-3-1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:56:4f:bc",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf3",
+        "interface": "e1-12",
+        "mac": "aa:c1:ab:6d:27:12",
+        "peer": "a"
+      }
+    }
+  ]
+}

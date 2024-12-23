@@ -1,0 +1,130 @@
+---
+name: dcf 
+prefix: ""
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:24.7.2
+    linux:
+      image: ghcr.io/srl-labs/network-multitool
+
+  nodes:
+    leaf1:
+      kind: nokia_srlinux
+      type: ixrd2l
+    leaf2:
+      kind: nokia_srlinux
+      type: ixrd2l
+    leaf3:
+      kind: nokia_srlinux
+      type: ixrd2l
+    spine1:
+      kind: nokia_srlinux
+      type: ixrd5
+    spine2:
+      kind: nokia_srlinux
+      type: ixrd5    
+    host-1-100:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:00:01 dev eth1
+        - ip addr add 192.168.101.2/28 dev eth1
+        - ip link add link eth1 eth1.100 type vlan id 100
+        - ip link set address 00:00:00:01:00:01 dev eth1.100
+        - ip add add 192.168.100.1/24 dev eth1.100
+        - ip link set eth1.100 up  
+    host-1-101:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:00:02 dev eth1
+        - ip addr add 192.168.101.3/28 dev eth1
+    host-1-103:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:00:03 dev eth1
+        - ip addr add 192.168.101.4/28 dev eth1
+    host-12-100:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:00:04 dev eth1
+        - ip addr add 192.168.101.5/28 dev eth1
+        - ip link set address 00:c1:ab:22:00:04 dev eth2
+        - ip addr add 192.168.101.6/28 dev eth2
+    host-2-100:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:02:01 dev eth1
+        - ip addr add 192.168.201.4/28 dev eth1
+        - ip link add link eth1 eth1.100 type vlan id 100
+        - ip link set address 00:00:00:01:00:02 dev eth1.100
+        - ip add add 192.168.100.2/24 dev eth1.100
+        - ip link set eth1.100 up 
+    host-2-101:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:02:02 dev eth1
+        - ip addr add 192.168.201.2/30 dev eth1
+        - ip link add link eth1 eth1.100 type vlan id 100
+        - ip link set address 00:00:00:00:00:11 dev eth1.100
+        - ip add add 100.1.1.2/24 dev eth1.100
+        - ip link set eth1.100 up
+    host-2-103:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:02:03 dev eth1
+        - ip addr add 192.168.201.3/28 dev eth1
+    host-3-100:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:03:01 dev eth1
+        - ip addr add 192.168.202.2/28 dev eth1
+        - ip link add link eth1 eth1.100 type vlan id 100
+        - ip link set address 00:00:00:01:00:03 dev eth1.100
+        - ip add add 192.168.100.3/24 dev eth1.100
+        - ip link set eth1.100 up 
+    host-3-101:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:03:02 dev eth1
+        - ip addr add 192.168.202.3/28 dev eth1
+    host-3-1:
+      kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:03:03 dev eth1
+        - ip addr add 192.168.202.4/28 dev eth1
+    graphite:
+      kind: linux
+      image: netreplica/graphite
+      env:
+        HOST_CONNECTION: ${SSH_CONNECTION}
+      binds:
+        - __clabDir__/topology-data.json:/htdocs/default/default.json:ro
+        - __clabDir__/ansible-inventory.yml:/htdocs/lab/default/ansible-inventory.yml:ro
+      ports:
+        - 8080:80
+      exec:
+        - sh -c 'graphite_motd.sh 8080'
+      labels:
+        graph-hide: yes
+  links:
+    # inter-switch links
+    - endpoints: ["leaf1:e1-1", "spine1:e1-1"]
+    - endpoints: ["leaf2:e1-1", "spine1:e1-2"]
+    - endpoints: ["leaf3:e1-1", "spine1:e1-3"]
+    - endpoints: ["leaf1:e1-2", "spine2:e1-1"]
+    - endpoints: ["leaf2:e1-2", "spine2:e1-2"]
+    - endpoints: ["leaf3:e1-2", "spine2:e1-3"]
+    # client links
+    - endpoints: ["host-1-100:eth1", "leaf1:e1-10"]
+    - endpoints: ["host-1-101:eth1", "leaf1:e1-11"]
+    - endpoints: ["host-1-103:eth1", "leaf1:e1-12"]
+    - endpoints: ["host-12-100:eth1", "leaf1:e1-13"]
+    - endpoints: ["host-12-100:eth2", "leaf2:e1-13"]
+    - endpoints: ["host-2-100:eth1", "leaf2:e1-10"]
+    - endpoints: ["host-2-101:eth1", "leaf2:e1-11"]
+    - endpoints: ["host-2-103:eth1", "leaf2:e1-12"]
+    - endpoints: ["host-3-100:eth1", "leaf3:e1-10"]
+    - endpoints: ["host-3-101:eth1", "leaf3:e1-11"]
+    - endpoints: ["host-3-1:eth1", "leaf3:e1-12"]
+
