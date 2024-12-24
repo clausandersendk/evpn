@@ -29,7 +29,7 @@ topology:
       kind: linux
       exec:
         - ip link set address 00:c1:ab:00:00:01 dev eth1
-        - ip addr add 192.168.101.2/28 dev eth1
+        - ip addr add 192.168.101.1/28 dev eth1
         - ip link add link eth1 eth1.100 type vlan id 100
         - ip link set address 00:00:00:01:00:01 dev eth1.100
         - ip add add 192.168.100.1/24 dev eth1.100
@@ -38,7 +38,7 @@ topology:
       kind: linux
       exec:
         - ip link set address 00:c1:ab:00:00:02 dev eth1
-        - ip addr add 192.168.101.3/28 dev eth1
+        - ip addr add 192.168.101.8/28 dev eth1
     host-1-103:
       kind: linux
       exec:
@@ -55,7 +55,7 @@ topology:
       kind: linux
       exec:
         - ip link set address 00:c1:ab:00:02:01 dev eth1
-        - ip addr add 192.168.201.4/28 dev eth1
+        - ip addr add 192.168.101.2/28 dev eth1
         - ip link add link eth1 eth1.100 type vlan id 100
         - ip link set address 00:00:00:01:00:02 dev eth1.100
         - ip add add 192.168.100.2/24 dev eth1.100
@@ -78,7 +78,7 @@ topology:
       kind: linux
       exec:
         - ip link set address 00:c1:ab:00:03:01 dev eth1
-        - ip addr add 192.168.202.2/28 dev eth1
+        - ip addr add 192.168.101.3/28 dev eth1
         - ip link add link eth1 eth1.100 type vlan id 100
         - ip link set address 00:00:00:01:00:03 dev eth1.100
         - ip add add 192.168.100.3/24 dev eth1.100
