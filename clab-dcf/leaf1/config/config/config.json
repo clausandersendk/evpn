@@ -4,10 +4,10 @@
       "generated-by": "SRLINUX",
       "name": "",
       "comment": "",
-      "created": "2025-01-03T14:04:22.845Z",
+      "created": "2024-12-16T07:31:07.784Z",
       "release": "v24.7.2",
       "enabled-yang-features": ["srl_nokia-features:aaa-spiffe-id", "srl_nokia-features:aaa-superuser", "srl_nokia-features:acl-filter-allowed-on-irb-interfaces", "srl_nokia-features:acl-filter-allowed-on-l2-interfaces", "srl_nokia-features:admin-user-roles", "srl_nokia-features:anycast-gw", "srl_nokia-features:arp-nd-datapath-programming", "srl_nokia-features:backplane-facing-capacity", "srl_nokia-features:bfd", "srl_nokia-features:bgp-add-paths", "srl_nokia-features:bgp-afi-safi-policy", "srl_nokia-features:bgp-auth-password", "srl_nokia-features:bgp-cfg-afi-safi-list", "srl_nokia-features:bgp-graceful-restart-gaps", "srl_nokia-features:bgp-import-export-policy-leaflist", "srl_nokia-features:bgp-ipv6-next-hop-tunnel-resolution", "srl_nokia-features:bgp-local-as-container-iso-list", "srl_nokia-features:bgp-max-ecmp-hash-buckets", "srl_nokia-features:bgp-mtu-discovery", "srl_nokia-features:bgp-multipath-maximum-paths", "srl_nokia-features:bgp-prefix-limit", "srl_nokia-features:bgp-prefix-limit-received", "srl_nokia-features:bgp-restart-max-wait", "srl_nokia-features:bgp-rib-afi-safi-list", "srl_nokia-features:bgp-rib-afi-safi-route", "srl_nokia-features:bgp-rtc", "srl_nokia-features:bgp-single-hop-connected-check", "srl_nokia-features:bgp-unnumbered-peers", "srl_nokia-features:bridged", "srl_nokia-features:cli-plugin-authorization", "srl_nokia-features:combined-bgp-ecmp", "srl_nokia-features:config-l2-mtu-default", "srl_nokia-features:config-sub-if-l2-mtu", "srl_nokia-features:dac-link-training", "srl_nokia-features:dhcp-relay-fqdn", "srl_nokia-features:dot1q-vlan-ranges", "srl_nokia-features:dynamic-tcam", "srl_nokia-features:event-handler", "srl_nokia-features:evpn", "srl_nokia-features:evpn-ifl-unequal-ecmp", "srl_nokia-features:evpn-mh", "srl_nokia-features:evpn-mh-ip-aliasing", "srl_nokia-features:evpn-mh-virtual-es", "srl_nokia-features:evpn-route-internal-tags", "srl_nokia-features:factory-reset", "srl_nokia-features:fixed", "srl_nokia-features:gnmi-extensions", "srl_nokia-features:gnmi-services", "srl_nokia-features:gnoi-bgp", "srl_nokia-features:gnoi-export-protos", "srl_nokia-features:gnoi-healthz", "srl_nokia-features:gnsi-accounting", "srl_nokia-features:gnsi-authz", "srl_nokia-features:gnsi-certz", "srl_nokia-features:gnsi-credentialz", "srl_nokia-features:grpc-server", "srl_nokia-features:icmp-rate-control", "srl_nokia-features:igmp-snooping", "srl_nokia-features:ingress-subif-policing", "srl_nokia-features:inter-as-nhsrr-ipvpn", "srl_nokia-features:interface-evpn-internal-tags", "srl_nokia-features:interface-references", "srl_nokia-features:internal-tags", "srl_nokia-features:ip-acl-dscp-set", "srl_nokia-features:ip-qos-multifield", "srl_nokia-features:ipv4-unnumbered", "srl_nokia-features:ipvpn-route-internal-tags", "srl_nokia-features:isis-level-passive", "srl_nokia-features:isis-lsdb", "srl_nokia-features:isis-mi", "srl_nokia-features:isis-mt", "srl_nokia-features:isis-nsf", "srl_nokia-features:l2-proxy-arp", "srl_nokia-features:l2-proxy-arp-nd-control-flood-on-evpn", "srl_nokia-features:l2-proxy-arp-nd-route-internal-tags", "srl_nokia-features:l2-proxy-nd", "srl_nokia-features:l2cp-transparency", "srl_nokia-features:l3-proxy-arp", "srl_nokia-features:l3-proxy-arp-irb", "srl_nokia-features:l3-proxy-nd", "srl_nokia-features:l3-proxy-nd-irb", "srl_nokia-features:lacp-fallback", "srl_nokia-features:lag", "srl_nokia-features:lag-forwarding-viable", "srl_nokia-features:license", "srl_nokia-features:longest-prefix-match", "srl_nokia-features:mcast-route-policy", "srl_nokia-features:mirror-dest-local", "srl_nokia-features:mirror-dest-remote", "srl_nokia-features:mirror-dest-remote-tunnel-encap-l2ogre", "srl_nokia-features:mirror-source-acl", "srl_nokia-features:mirror-source-intf", "srl_nokia-features:mirror-source-subintf", "srl_nokia-features:mirroring", "srl_nokia-features:mirroring-intf-stats", "srl_nokia-features:mld-snooping", "srl_nokia-features:named-queues-and-named-fcs", "srl_nokia-features:netconf", "srl_nokia-features:nhsrr-evpn", "srl_nokia-features:packet-tracer", "srl_nokia-features:platform-7220-d2", "srl_nokia-features:port-fec-clause74", "srl_nokia-features:port-speed-100G", "srl_nokia-features:port-speed-10G", "srl_nokia-features:port-speed-1G", "srl_nokia-features:port-speed-25G", "srl_nokia-features:port-speed-40G", "srl_nokia-features:qos", "srl_nokia-features:qos-dot1p-classifier-policy", "srl_nokia-features:qos-dot1p-rewrite-policy", "srl_nokia-features:qos-drop-probability", "srl_nokia-features:qos-dscp-classifier-policy", "srl_nokia-features:qos-dscp-rewrite-policy", "srl_nokia-features:qos-ecn", "srl_nokia-features:qos-irb-subinterface", "srl_nokia-features:qos-management-protocols-dscp", "srl_nokia-features:qos-multicast-queue", "srl_nokia-features:qos-queue-high-threshold", "srl_nokia-features:qos-queue-management-profile", "srl_nokia-features:qos-rewrite-dot1p", "srl_nokia-features:qos-scheduler-policies", "srl_nokia-features:qos-unicast-queue", "srl_nokia-features:qos-vxlan-classifier-policy", "srl_nokia-features:qos-wred-traffic-type-tcp", "srl_nokia-features:ra-guard", "srl_nokia-features:radius-source-address", "srl_nokia-features:reload-delay", "srl_nokia-features:route-leaking", "srl_nokia-features:routing-policy-bgp-med", "srl_nokia-features:routing-policy-bgp-next-hop-self-action", "srl_nokia-features:routing-policy-bgp-next-hop-set-action", "srl_nokia-features:routing-policy-community-match-set-options", "srl_nokia-features:routing-policy-match-protocol-redefine", "srl_nokia-features:routing-policy-named-statements", "srl_nokia-features:routing-policy-next-policy", "srl_nokia-features:routing-policy-next-statement", "srl_nokia-features:routing-policy-preference-action", "srl_nokia-features:segment-routing-adjacency-sid", "srl_nokia-features:segment-routing-shared-sid", "srl_nokia-features:sflow", "srl_nokia-features:snmp-counters", "srl_nokia-features:snmp-traps", "srl_nokia-features:snmp-v3", "srl_nokia-features:static-route-tag-set", "srl_nokia-features:storm-control", "srl_nokia-features:subif-acl-policer", "srl_nokia-features:subif-policer", "srl_nokia-features:system-hash-seed-from-mac", "srl_nokia-features:tacacs-source-address", "srl_nokia-features:trident3", "srl_nokia-features:unequal-ecmp", "srl_nokia-features:unified-forwarding-tables", "srl_nokia-features:virtual-ip-discovery", "srl_nokia-features:vlan-id-optional", "srl_nokia-features:vlan-tpid", "srl_nokia-features:vxlan", "srl_nokia-features:vxlan-stats", "srl_nokia-features:warm-reboot"],
-      "checksum": "c51850d3d2a0755a$d8a47311db851092268943c27fbb20a2b69a522b"
+      "checksum": "00d8a7e5897b38ff$ef3f225f535ace5e89c4c4f9863bdb810ddd0777"
     },
     "build": {
       "git-branch": "SRL_24_7_B1",
@@ -3063,7 +3063,7 @@
             "admin-state": "enable",
             "address": [
               {
-                "ip-prefix": "10.1.2.1/31"
+                "ip-prefix": "10.1.1.1/31"
               }
             ]
           }
@@ -3080,7 +3080,7 @@
             "admin-state": "enable",
             "address": [
               {
-                "ip-prefix": "10.2.2.1/31"
+                "ip-prefix": "10.2.1.1/31"
               }
             ]
           }
@@ -3149,7 +3149,7 @@
             "admin-state": "enable",
             "address": [
               {
-                "ip-prefix": "100.0.2.2/32"
+                "ip-prefix": "100.0.2.1/32"
               }
             ]
           }
@@ -3218,8 +3218,8 @@
       "server-profile": [
         {
           "name": "clab-profile",
-          "key": "$aes1$ATC7QWoVXCbhjG8=$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",
-          "certificate": "-----BEGIN CERTIFICATE-----\nMIIDvzCCAqegAwIBAgICBnowDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMx\nCTAHBgNVBAcTADEVMBMGA1UEChMMY29udGFpbmVybGFiMQkwBwYDVQQLEwAxEzAR\nBgNVBAMTCmRjZiBsYWIgQ0EwHhcNMjQxMjEwMTE0MTIxWhcNMjUxMjEwMTE0MTIx\nWjBRMQswCQYDVQQGEwJVUzEJMAcGA1UEBxMAMRUwEwYDVQQKEwxjb250YWluZXJs\nYWIxCTAHBgNVBAsTADEVMBMGA1UEAxMMbGVhZjIuZGNmLmlvMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5LJ08B55S77a6kqSyTIi3OoaO0M05LuiXpmC\nV0koPbGF2n/Y37KgDag/UrZ6omf46Wnzunh1VxooEcTpGke7Yc4vc542Z42Eyy+3\nRpjOKd1xVQLTxXC80NoRsKRnJRV5qdH/sODKdTaudXbIn9rUDhj3HjCf4nGtlrvR\nzzEi6QyXzRNHmBYK8KWk9X5lqcyuWUEk/Jqka9ncg9T1Qm3zoseYmQNm6vLhkFtE\npz7uZHhi8Icok5cSQMBP1KMWKuXyyWk8kLvu/lpZ1azoyPDhFoaGBBL0OeMsxKlw\nKFTb6/RJXKw6zLVYU7KrwUM0Yt/WmPti+Sw7ZteNqqgyrZgXuQIDAQABo4GiMIGf\nMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw\nDgYDVR0OBAcEBQECAwQGMB8GA1UdIwQYMBaAFJlnqIFMPthqY0NZ04ELhqVAbBX7\nMD0GA1UdEQQ2MDSCBWxlYWYyggVsZWFmMoIMbGVhZjIuZGNmLmlvhwSsFBQChxAg\nAQFyACAAIAAAAAAAAAACMA0GCSqGSIb3DQEBCwUAA4IBAQC5Eo+lLqV3Ra6fv2UV\n1lczUUjLHLsESZQkE/v8nfqgzssKyCA5CqUokxyT1B6ANbPkxmVOhblnOMXU3Y2+\n/nEwajnCiZgZr0U1zPtorxtI0fauIUjqavxWIUU4Eq5tvySEJtIZhbJwqlgfrm0d\nJSoHH91FnsbFRyVebWRDTPFtzU/DV487RVnraej0wpedzXswWS6t9Kb9poQh9kdP\nYUW4eRJdO8l7fuut0RV6l1mAe1lRHRtUDx0SCTHTIQMcThB64VlFAA4FtYfoFN+g\ndk/+zwWquOQiCNR44uhE1aBpkmosnFmM/FgP4lapqxlq91h0C61olVjkpoLLGXnU\nUGml\n-----END CERTIFICATE-----\n",
+          "key": "$aes1$ATCxYXEssBUwwm8=$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",
+          "certificate": "-----BEGIN CERTIFICATE-----\nMIIDvzCCAqegAwIBAgICBnowDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMx\nCTAHBgNVBAcTADEVMBMGA1UEChMMY29udGFpbmVybGFiMQkwBwYDVQQLEwAxEzAR\nBgNVBAMTCmRjZiBsYWIgQ0EwHhcNMjQxMjEwMTE0MTIxWhcNMjUxMjEwMTE0MTIx\nWjBRMQswCQYDVQQGEwJVUzEJMAcGA1UEBxMAMRUwEwYDVQQKEwxjb250YWluZXJs\nYWIxCTAHBgNVBAsTADEVMBMGA1UEAxMMbGVhZjEuZGNmLmlvMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA67EXFaHOW/wsM/FbXzwSUXxQrZ+zVE+AAJ27\nsOQS4cqUEWtWJDcXj+b0Dqk2MqISTySDqTsk3aw/whqsleCy+qvyhrI7Q2UoKFNi\nYoPLY5jdUcbcZfCWmgHqtK5UN7P72KTVt+PWugszcDbxTRd8plBN3nHPP48jqs2g\nOFyN+KRniOXlx3wslnTG//Zu9Ogs0G0XosMMNBfp2jemHj7F2PnD8P9Ar1kygv4c\nIeFkF4dzM0wgH0xioueXMlwYN/9pXb8G+4PiSSgYlNvw2dQJ85CXmp1MqhsLicpg\nNL7rasDDzzVbMbwWlISxobWJPFuOdKE7e1tu/8Bdl3bAmrWT6wIDAQABo4GiMIGf\nMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEw\nDgYDVR0OBAcEBQECAwQGMB8GA1UdIwQYMBaAFJlnqIFMPthqY0NZ04ELhqVAbBX7\nMD0GA1UdEQQ2MDSCBWxlYWYxggVsZWFmMYIMbGVhZjEuZGNmLmlvhwSsFBQGhxAg\nAQFyACAAIAAAAAAAAAAGMA0GCSqGSIb3DQEBCwUAA4IBAQDDeQdpyP3vOh5hdR5a\n3JYbnZb8NtMMz8TozxSedt7jo9GGCsXJCAMRBugC5MwccYFJNw1hOmpEYPH4hR5Y\nNKGBjX71g/nfoI/SD8VPsKzIvmfhwt7FokkHStD5U0Mv/dsArryB5z7GGjWJCaJs\nNsI1RC5ig4t4he8qkWqv2JkXgsQyLQoVhayR0p80Aah66QfV77gNpCsjjyX+IMGC\nUlOdMCU5HCwWk0AS76aVpMYNDmb8JO/AyHGLPwprxGAZy/A5+FxYM/DgMeDZzx9d\njK2uP3hYIMvmd2Dy7CSnxH3fvx5tgjQT3GcEDvFshC05DdeAM3o2yLYj0idpFZgH\nfOwv\n-----END CERTIFICATE-----\n",
           "authenticate-client": false
         }
       ]
@@ -3297,7 +3297,7 @@
           "community-entry": [
             {
               "name": "RO-Community",
-              "community": "$aes1$AWA/BvWRiaKF4W8=$tAM6OdvuP8GfSlBN2SVlAA=="
+              "community": "$aes1$AWDZJVnRmLHgrm8=$uwT9+BbjzuHTWbIAWVmM8A=="
             }
           ]
         }
@@ -3314,6 +3314,17 @@
     },
     "srl_nokia-logging:logging": {
       "buffer": [
+        {
+          "buffer-name": "bgp",
+          "subsystem": [
+            {
+              "subsystem-name": "bgp",
+              "priority": {
+                "match-above": "debug"
+              }
+            }
+          ]
+        },
         {
           "buffer-name": "messages",
           "rotate": 3,
@@ -3468,7 +3479,6 @@
   "srl_nokia-network-instance:network-instance": [
     {
       "name": "default",
-      "type": "srl_nokia-network-instance:default",
       "interface": [
         {
           "name": "ethernet-1/1.0"
@@ -3477,15 +3487,27 @@
           "name": "ethernet-1/2.0"
         },
         {
+          "name": "lo0"
+        },
+        {
+          "name": "lo0.0"
+        },
+        {
           "name": "system0.0"
         }
       ],
       "protocols": {
         "srl_nokia-bgp:bgp": {
           "admin-state": "enable",
-          "autonomous-system": 65002,
-          "router-id": "100.0.2.2",
+          "autonomous-system": 65001,
+          "router-id": "100.0.2.1",
           "afi-safi": [
+            {
+              "afi-safi-name": "srl_nokia-common:evpn",
+              "multipath": {
+                "maximum-paths": 2
+              }
+            },
             {
               "afi-safi-name": "srl_nokia-common:ipv4-unicast",
               "admin-state": "enable",
@@ -3494,6 +3516,14 @@
               }
             }
           ],
+          "trace-options": {
+            "flag": [
+              {
+                "name": "update",
+                "modifier": "detail"
+              }
+            ]
+          },
           "group": [
             {
               "group-name": "evpnRR",
@@ -3525,13 +3555,13 @@
           ],
           "neighbor": [
             {
-              "peer-address": "10.1.2.0",
+              "peer-address": "10.1.1.0",
               "description": "default network-instance bgp neighbor to Leaf-1",
               "peer-as": 64999,
               "peer-group": "spine"
             },
             {
-              "peer-address": "10.2.2.0",
+              "peer-address": "10.2.1.0",
               "description": "default network-instance bgp neighbor to Leaf-2",
               "peer-as": 64999,
               "peer-group": "spine"

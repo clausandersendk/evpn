@@ -28,8 +28,6 @@ topology:
     host-1-100:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:00:01 dev eth1
-        - ip addr add 192.168.101.2/28 dev eth1
         - ip link add link eth1 eth1.100 type vlan id 100
         - ip link set address 00:00:00:01:00:01 dev eth1.100
         - ip add add 192.168.100.1/24 dev eth1.100
@@ -37,25 +35,35 @@ topology:
     host-1-101:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:00:02 dev eth1
-        - ip addr add 192.168.101.3/28 dev eth1
+        - ip link add link eth1 eth1.101 type vlan id 101
+        - ip link set address 00:00:00:01:01:01 dev eth1.101
+        - ip add add 192.168.101.1/24 dev eth1.101
+        - ip link set eth1.101 up 
     host-1-103:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:00:03 dev eth1
-        - ip addr add 192.168.101.4/28 dev eth1
+        - ip link add link eth1 eth1.103 type vlan id 103
+        - ip link set address 00:00:00:03:01:1 dev eth1.103
+        - ip add add 192.168.103.1/24 dev eth1.103
+        - ip link set eth1.103 up 
     host-12-100:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:00:04 dev eth1
-        - ip addr add 192.168.101.5/28 dev eth1
-        - ip link set address 00:c1:ab:22:00:04 dev eth2
-        - ip addr add 192.168.101.6/28 dev eth2
+        - ip link add bond0 type bond
+        - ip link set bond0 type bond mode 4
+        - ip link set address 00:00:00:12:00:01 dev bond0
+        # - ip link set eth1 master bond0
+        # - ip link set eth2 master bond0
+        - ip link add link bond0 name bond0.100 type vlan id 100
+        - ip addr add 192.168.100.12/24 dev bond0.100
+        - ip link add link bond0 name bond0.101 type vlan id 101
+        - ip addr add 192.168.101.12/24 dev bond0.101
+        - ip link set bond0 up
+        - ip link set eth1 up
+        - ip link set eth2 up
     host-2-100:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:02:01 dev eth1
-        - ip addr add 192.168.201.4/28 dev eth1
         - ip link add link eth1 eth1.100 type vlan id 100
         - ip link set address 00:00:00:01:00:02 dev eth1.100
         - ip add add 192.168.100.2/24 dev eth1.100
@@ -63,22 +71,20 @@ topology:
     host-2-101:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:02:02 dev eth1
-        - ip addr add 192.168.201.2/30 dev eth1
-        - ip link add link eth1 eth1.100 type vlan id 100
-        - ip link set address 00:00:00:00:00:11 dev eth1.100
-        - ip add add 100.1.1.2/24 dev eth1.100
-        - ip link set eth1.100 up
+        - ip link add link eth1 eth1.101 type vlan id 101
+        - ip link set address 00:00:00:01:01:02 dev eth1.101
+        - ip add add 192.168.101.2/24 dev eth1.101
+        - ip link set eth1.101 up 
     host-2-103:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:02:03 dev eth1
-        - ip addr add 192.168.201.3/28 dev eth1
+        - ip link add link eth1 eth1.103 type vlan id 103
+        - ip link set address 00:00:00:03:01:02 dev eth1.103
+        - ip add add 192.168.103.2/24 dev eth1.103
+        - ip link set eth1.103 up 
     host-3-100:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:03:01 dev eth1
-        - ip addr add 192.168.202.2/28 dev eth1
         - ip link add link eth1 eth1.100 type vlan id 100
         - ip link set address 00:00:00:01:00:03 dev eth1.100
         - ip add add 192.168.100.3/24 dev eth1.100
@@ -86,27 +92,29 @@ topology:
     host-3-101:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:03:02 dev eth1
-        - ip addr add 192.168.202.3/28 dev eth1
+        - ip link add link eth1 eth1.101 type vlan id 101
+        - ip link set address 00:00:00:01:01:03 dev eth1.101
+        - ip add add 192.168.101.3/24 dev eth1.101
+        - ip link set eth1.101 up 
     host-3-1:
       kind: linux
       exec:
-        - ip link set address 00:c1:ab:00:03:03 dev eth1
-        - ip addr add 192.168.202.4/28 dev eth1
-    graphite:
-      kind: linux
-      image: netreplica/graphite
-      env:
-        HOST_CONNECTION: ${SSH_CONNECTION}
-      binds:
-        - __clabDir__/topology-data.json:/htdocs/default/default.json:ro
-        - __clabDir__/ansible-inventory.yml:/htdocs/lab/default/ansible-inventory.yml:ro
-      ports:
-        - 8080:80
-      exec:
-        - sh -c 'graphite_motd.sh 8080'
-      labels:
-        graph-hide: yes
+        - ip link set address 00:00:00:01:03:03 dev eth1
+        - ip addr add 192.168.1.2/24 dev eth1
+    # graphite:
+    #   kind: linux
+    #   image: netreplica/graphite
+    #   env:
+    #     HOST_CONNECTION: ${SSH_CONNECTION}
+    #   binds:
+    #     - __clabDir__/topology-data.json:/htdocs/default/default.json:ro
+    #     - __clabDir__/ansible-inventory.yml:/htdocs/lab/default/ansible-inventory.yml:ro
+    #   ports:
+    #     - 8080:80
+    #   exec:
+    #     - sh -c 'graphite_motd.sh 8080'
+    #   labels:
+    #     graph-hide: yes
   links:
     # inter-switch links
     - endpoints: ["leaf1:e1-1", "spine1:e1-1"]
@@ -118,13 +126,13 @@ topology:
     # client links
     - endpoints: ["host-1-100:eth1", "leaf1:e1-10"]
     - endpoints: ["host-1-101:eth1", "leaf1:e1-11"]
-    - endpoints: ["host-1-103:eth1", "leaf1:e1-12"]
+    - endpoints: ["host-1-103:eth1", "leaf1:e1-9"]
     - endpoints: ["host-12-100:eth1", "leaf1:e1-13"]
     - endpoints: ["host-12-100:eth2", "leaf2:e1-13"]
     - endpoints: ["host-2-100:eth1", "leaf2:e1-10"]
     - endpoints: ["host-2-101:eth1", "leaf2:e1-11"]
-    - endpoints: ["host-2-103:eth1", "leaf2:e1-12"]
+    - endpoints: ["host-2-103:eth1", "leaf2:e1-9"]
     - endpoints: ["host-3-100:eth1", "leaf3:e1-10"]
     - endpoints: ["host-3-101:eth1", "leaf3:e1-11"]
-    - endpoints: ["host-3-1:eth1", "leaf3:e1-12"]
+    - endpoints: ["host-3-1:eth1", "leaf3:e1-21"]
 
